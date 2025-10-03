@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoNation - Do for the Nation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Danम्</h2>
+                    <span>Do for the Nation</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#campaigns" class="nav-link">Campaigns</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#impact" class="nav-link">Impact</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="signup.html" class="nav-link signup-link">Sign Up</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Building a Brighter Future, One Life at a Time</h1>
+                <p class="hero-subtitle">DoNation connects you with causes addressing poverty, hunger, and inequality around the world. Your contribution empowers individuals and communities, providing access to education, healthcare, and essential resources.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('campaigns')">Start Donating</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+                    <a href="signup.html" class="btn btn-accent">Join DoNation</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Lives Impacted</p>
+                    </div>
+                    <div class="stat">
+                        <h3>$2M+</h3>
+                        <p>Raised</p>
+                    </div>
+                    <div class="stat">
+                        <h3>200+</h3>
+                        <p>Active Campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Welcome to DoNation</h2>
+                <p>Your gateway to making a difference in the lives of those in need</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Our platform is a dynamic and user-friendly online space designed to connect compassionate individuals, organizations, and communities with opportunities to support charitable causes and initiatives.</p>
+                    <p>At DoNation, we believe in the power of generosity to create positive change. Whether you're passionate about providing food and shelter to the homeless, supporting education for underprivileged children, or addressing environmental issues, our platform offers a diverse range of causes for you to contribute to.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Transparency</h4>
+                            <p>Every donation is tracked and reported</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>Community</h4>
+                            <p>Join a network of compassionate givers</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Impact</h4>
+                            <p>See the real difference you're making</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-heart"></i>
+                        <p>Making a Difference Together</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaigns Section -->
+    <section id="campaigns" class="campaigns">
+        <div class="container">
+            <div class="section-header">
+                <h2>Active Campaigns</h2>
+                <p>Choose a cause that resonates with you and make a difference today</p>
+            </div>
+            <div class="campaign-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="hunger">Hunger Relief</button>
+                <button class="filter-btn" data-filter="environment">Environment</button>
+            </div>
+            <div class="campaigns-grid" id="campaignsGrid">
+                <!-- Campaigns will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <p>See the real difference we're making together</p>
+            </div>
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>15,000</h3>
+                    <p>Children Educated</p>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>100,000</h3>
+                    <p>Meals Provided</p>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>5,000</h3>
+                    <p>Families Housed</p>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-medkit"></i>
+                    </div>
+                    <h3>25,000</h3>
+                    <p>Medical Treatments</p>
+                </div>
+            </div>
+            <div class="impact-stories">
+                <h3>Success Stories</h3>
+                <div class="stories-grid">
+                    <div class="story">
+                        <div class="story-image">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>Education for All</h4>
+                        <p>Thanks to your donations, we've built 50 schools in rural areas, providing education to over 10,000 children who previously had no access to learning.</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-image">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Healthcare Access</h4>
+                        <p>Our mobile clinics have provided free medical care to 15,000 people in underserved communities, saving countless lives.</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-image">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Environmental Protection</h4>
+                        <p>We've planted 100,000 trees and implemented sustainable farming practices, helping communities adapt to climate change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Make a Donation</h2>
+            <div class="donation-form">
+                <div class="campaign-info">
+                    <h3 id="modalCampaignTitle"></h3>
+                    <p id="modalCampaignDescription"></p>
+                </div>
+                <form id="donationForm">
+                    <div class="form-group">
+                        <label for="donationAmount">Donation Amount</label>
+                        <div class="amount-buttons">
+                            <button type="button" class="amount-btn" data-amount="25">$25</button>
+                            <button type="button" class="amount-btn" data-amount="50">$50</button>
+                            <button type="button" class="amount-btn" data-amount="100">$100</button>
+                            <button type="button" class="amount-btn" data-amount="250">$250</button>
+                        </div>
+                        <input type="number" id="customAmount" placeholder="Custom amount" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorName">Full Name</label>
+                        <input type="text" id="donorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Email</label>
+                        <input type="email" id="donorEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorMessage">Message (Optional)</label>
+                        <textarea id="donorMessage" rows="3" placeholder="Add a personal message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Donate Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>dan@donation.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 1601160116</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>1601,Katargam , Surat</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DoNation</h3>
+                    <p>Building a brighter future, one life at a time. Join us in making a difference.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#campaigns">Campaigns</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest campaigns and impact stories.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DoNation. All rights reserved. | Do for the Nation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

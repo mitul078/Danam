@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - DoNation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h2>Danम्</h2>
+                        <span>Do for the Nation</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#campaigns" class="nav-link">Campaigns</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#impact" class="nav-link">Impact</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="signup.html" class="nav-link active">Sign Up</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-content">
+                <div class="signup-form-container">
+                    <div class="signup-header">
+                        <h1>Join Danम्</h1>
+                        <p>Create your account and start making a difference today</p>
+                    </div>
+
+                    <form class="signup-form" id="signupForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <i class="fas fa-envelope form-icon"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <i class="fas fa-phone form-icon"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <i class="fas fa-lock form-icon"></i>
+                            <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <i class="fas fa-lock form-icon"></i>
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userType">I want to:</label>
+                            <select id="userType" name="userType" required>
+                                <option value="">Select your role</option>
+                                <option value="donor">Donate to causes</option>
+                                <option value="volunteer">Volunteer my time</option>
+                                <option value="organization">Create campaigns</option>
+                                <option value="all">All of the above</option>
+                            </select>
+                            <i class="fas fa-users form-icon"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Areas of Interest (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="education">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Education
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="healthcare">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-medkit"></i>
+                                    Healthcare
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="hunger">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-utensils"></i>
+                                    Hunger Relief
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="environment">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-leaf"></i>
+                                    Environment
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="disaster">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-hands-helping"></i>
+                                    Disaster Relief
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="women">
+                                    <span class="checkmark"></span>
+                                    <i class="fas fa-female"></i>
+                                    Women's Rights
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label terms">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label newsletter">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates on campaigns and impact stories
+                            </label>
+                        </div>
+
+                        <button type="submit" class="signup-btn">
+                            <span class="btn-text">Create Account</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Creating Account...
+                            </span>
+                        </button>
+
+                        <div class="signup-footer">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="signup-benefits">
+                    <div class="benefits-content">
+                        <h2>Why Join Danम्?</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Make a Real Impact</h4>
+                                    <p>See exactly how your contributions are making a difference in people's lives</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Transparent & Secure</h4>
+                                    <p>All donations are tracked and reported with complete transparency</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Join a Community</h4>
+                                    <p>Connect with like-minded individuals who share your passion for helping others</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Track Your Impact</h4>
+                                    <p>Monitor your giving history and see the cumulative impact of your donations</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-preview">
+                            <h3>Join Our Growing Community</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <h4>25,000+</h4>
+                                    <p>Active Members</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h4>$5M+</h4>
+                                    <p>Raised This Year</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h4>500+</h4>
+                                    <p>Successful Campaigns</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DoNation</h3>
+                    <p>Building a brighter future, one life at a time. Join us in making a difference.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#campaigns">Campaigns</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#impact">Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Started</h4>
+                    <ul>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="#">How to Donate</a></li>
+                        <li><a href="#">Create Campaign</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DoNation. All rights reserved. | Do for the Nation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
