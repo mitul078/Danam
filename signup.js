@@ -573,3 +573,4 @@ function populateForm() {
 function clearSavedData() {
     localStorage.removeItem('signupFormData');
 }
+
